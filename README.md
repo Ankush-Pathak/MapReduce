@@ -1,12 +1,9 @@
----
-colorlinks: true
-geometry: margin=2cm
----
-
 
 # MapReduce
 Ankush Pathak (ankushvpathak@gmail.com)  
-***This report is rendered as `README.pdf`.***        
+***This report is rendered as `README.pdf`.***  
+[comment]: <> (Command: pandoc -s -o README.pdf README.md  --css pandoc.css --self-contained --pdf-engine=xelatex --toc -f commonmark -V "geometry: margin=2cm")
+
 
 ## Design       
 ![Design](design.png)
