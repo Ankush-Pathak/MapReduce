@@ -1,0 +1,30 @@
+{
+    "fileHost": "quis irure et aliqua",
+    "inputFilePath": "_input_file_",
+    "mapperFilePath": "_map_file_",
+    "mappers": [
+        {
+            "host": "localhost",
+            "port": "2600"
+        },
+        {
+            "host": "localhost",
+            "port": "2700"
+        }
+    ],
+    "outputHDFS": {
+        "host": "localhost",
+        "port": "4500"
+    },
+    "reducerFilePath": "_red_file_",
+    "reducers": [
+        {
+            "host": "localhost",
+            "port": "3600"
+        },
+        {
+            "host": "localhost",
+            "port": "3700"
+        }
+    ]
+}

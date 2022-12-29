@@ -1,0 +1,7 @@
+[20:37:34 -04:00] [] [---I---] [thread 2231191] Clearing data store
+[20:37:38 -04:00] [] [---I---] [thread 2231212] Starting append stream
+[20:37:38 -04:00] [] [---I---] [thread 2231212] Ending append stream, data store size: 2258 2258
+[20:37:42 -04:00] [] [---I---] [thread 2231793] Starting append stream
+[20:37:42 -04:00] [] [---I---] [thread 2231793] Ending append stream, data store size: 3672 3672
+[20:38:02 -04:00] [] [---I---] [thread 2231793] Streaming data
+[20:38:02 -04:00] [] [---I---] [thread 2231793] Data streamed

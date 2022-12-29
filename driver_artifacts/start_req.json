@@ -1,0 +1,30 @@
+{
+    "fileHost": "quis irure et aliqua",
+    "inputFilePath": "/u/ankpath/ECC/Assignment2/driver_artifacts/../build/input_file_20MB",
+    "mapperFilePath": "/u/ankpath/ECC/Assignment2/driver_artifacts/invertedindexMap.cpp",
+    "mappers": [
+        {
+            "host": "localhost",
+            "port": "2600"
+        },
+        {
+            "host": "localhost",
+            "port": "2700"
+        }
+    ],
+    "outputHDFS": {
+        "host": "localhost",
+        "port": "4500"
+    },
+    "reducerFilePath": "/u/ankpath/ECC/Assignment2/driver_artifacts/invertedindexRed.cpp",
+    "reducers": [
+        {
+            "host": "localhost",
+            "port": "3600"
+        },
+        {
+            "host": "localhost",
+            "port": "3700"
+        }
+    ]
+}

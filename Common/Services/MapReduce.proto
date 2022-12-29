@@ -1,0 +1,111 @@
+syntax = "proto3";
+
+service MapReduce {
+  rpc startMapReduce(Config) returns (Result) {}
+  rpc getStatus(Empty) returns (Result) {}
+}
+
+message Host {
+  string host = 1;
+  string port = 2;
+}
+
+message Empty {}
+
+message Config {
+  optional string fileHost = 3;
+  string inputFilePath = 4;
+  string mapperFilePath = 5;
+  string reducerFilePath = 6;
+  Host outputHDFS = 9;
+  repeated Host mappers = 11;
+  repeated Host reducers = 12;
+
+}
+
+message Result {
+  string timestamp = 1;
+  int32 healthyMappers = 2;
+  int32 totalMappers = 3;
+  int32 healthyReducers = 4;
+  int32 totalReducers = 5;
+  int32 averageMappingPercentageDone = 6;
+  int32 averageReducingPercentageDone = 7;
+}
+
+service MapperService {
+  rpc startMapper(MapperConfigRequest) returns (MapperResult) {}
+  rpc getStatus(Empty) returns (MapperResult) {}
+  rpc die(Empty) returns (MapperResult) {}
+}
+
+message MapperConfigRequest {
+  Host hDFSService = 1;
+  repeated Host reducerHDFSServices = 4;
+}
+
+message ReducerKeys {
+  repeated string keys = 1;
+}
+
+message MapperResult {
+  int32 percentDone = 2;
+}
+
+service ReducerService {
+  rpc startReducer(ReducerConfigRequest) returns (ReducerResult) {}
+  rpc getStatus(Empty) returns (stream ReducerResult) {}
+  rpc die(Empty) returns (Empty) {}
+}
+
+message ReducerConfigRequest {
+  Host hDFSService = 2;
+}
+
+message ReducerResult {
+  int32 percentDone = 3;
+  string key = 1;
+  string value = 2;
+}
+
+service HDFSService {
+  rpc streamAppend(stream SetRequest) returns (Empty) {}
+  rpc set(SetRequest) returns (SetResponse) {}
+  rpc setStream(stream SetRequest) returns (Empty) {}
+  rpc get(GetRequest) returns (GetResponse) {}
+  rpc append(SetRequest) returns (SetResponse) {}
+  rpc streamData(Empty) returns (stream StreamResponse) {}
+  rpc getMetaData(Empty) returns (HDFSMetaData) {}
+  rpc clear(Empty) returns (Empty){}
+  rpc die(Empty) returns (Empty) {}
+}
+
+message HDFSMetaData {
+  int64 noOfRecords = 1;
+}
+
+message SetRequestStream {
+  repeated SetRequest setRequests = 1;
+}
+
+message SetRequest {
+  string key = 1;
+  string value = 2;
+}
+
+message SetResponse {
+  string message = 1;
+}
+
+message GetRequest {
+  string key = 1;
+}
+
+message GetResponse {
+  string value = 1;
+}
+
+message StreamResponse {
+  string key = 1;
+  string value = 2;
+}

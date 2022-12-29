@@ -1,0 +1,57 @@
+[20:34:48 -04:00] [] [---I---] [thread 2201449] Server up on: 4100
+[20:34:48 -04:00] [] [---I---] [thread 2188033] Invoking MapReduce thread
+[20:34:48 -04:00] [] [---I---] [thread 2201480] Starting MapReduce
+[20:34:48 -04:00] [] [---I---] [thread 2201480] Compiling Mapper and Reducer
+[20:35:07 -04:00] [] [---I---] [thread 2201480] Mapper init done
+[20:35:07 -04:00] [] [---I---] [thread 2201480] Reducer init done
+[20:35:07 -04:00] [] [---I---] [thread 2201480] Moving mapper stuff to target host localhost
+[20:35:13 -04:00] [] [---I---] [thread 2201480] Starting HDFS on localhost:2599
+[20:35:14 -04:00] [] [---I---] [thread 2201480] Moving mapper stuff to target host localhost
+[20:35:19 -04:00] [] [---I---] [thread 2201480] Starting HDFS on localhost:2699
+[20:35:20 -04:00] [] [---I---] [thread 2201480] Moving reducer stuff to target host localhost
+[20:35:25 -04:00] [] [---I---] [thread 2201480] Starting HDFS on localhost:3599
+[20:35:26 -04:00] [] [---I---] [thread 2201480] Moving reducer stuff to target host localhost
+[20:35:31 -04:00] [] [---I---] [thread 2201480] Starting HDFS on localhost:3699
+[20:35:32 -04:00] [] [---I---] [thread 2201480] Starting input processing
+[20:35:32 -04:00] [] [---I---] [thread 2201480] Working on input for mapper 1, split size: 1829 of 3659
+[20:35:32 -04:00] [] [---I---] [thread 2201480] Pushed: 1829 lines
+[20:35:32 -04:00] [] [---I---] [thread 2201480] Working on input for last mapper
+[20:35:32 -04:00] [] [---I---] [thread 2201480] Pushed: 1829 lines
+[20:35:32 -04:00] [] [---I---] [thread 2201480] Starting mapper: localhost:2600
+[20:35:36 -04:00] [] [---I---] [thread 2201480] Configuring mapper: localhost:2600
+[20:35:36 -04:00] [] [---I---] [thread 2201480] Mapper Done: 0%
+[20:35:36 -04:00] [] [---I---] [thread 2201480] Starting mapper: localhost:2700
+[20:35:40 -04:00] [] [---I---] [thread 2201480] Configuring mapper: localhost:2700
+[20:35:40 -04:00] [] [---I---] [thread 2201480] Mapper Done: 0%
+[20:35:40 -04:00] [] [---I---] [thread 2201480] Invoking status checker
+[20:35:40 -04:00] [] [---I---] [thread 2201480] Starting Map status checking thread
+[20:35:40 -04:00] [] [---I---] [thread 2201480] Bringing barrier up
+[20:35:40 -04:00] [] [---I---] [thread 2216589] Checking in on working mapper: localhost:2600
+[20:35:40 -04:00] [] [---I---] [thread 2216589] Mapper localhost:2600 done: 100%
+[20:35:40 -04:00] [] [---I---] [thread 2216589] Mapper localhost:2600 says it's dying
+[20:35:46 -04:00] [] [---I---] [thread 2216589] Checking in on working mapper: localhost:2700
+[20:35:46 -04:00] [] [---I---] [thread 2216589] Mapper localhost:2700 done: 100%
+[20:35:46 -04:00] [] [---I---] [thread 2216589] Mapper localhost:2700 says it's dying
+[20:35:52 -04:00] [] [---I---] [thread 2216589] Mappers done
+[20:35:52 -04:00] [] [---I---] [thread 2201480] Barrier is down
+[20:35:52 -04:00] [] [---I---] [thread 2201480] Starting reducer: localhost:3600
+[20:35:57 -04:00] [] [---I---] [thread 2201480] Configuring reducer: localhost:3600
+[20:35:57 -04:00] [] [---I---] [thread 2201480] Reducer Done: 0%
+[20:35:57 -04:00] [] [---I---] [thread 2201480] Starting reducer: localhost:3700
+[20:36:01 -04:00] [] [---I---] [thread 2201480] Configuring reducer: localhost:3700
+[20:36:01 -04:00] [] [---I---] [thread 2201480] Reducer Done: 0%
+[20:36:01 -04:00] [] [---I---] [thread 2201480] Invoking status checker
+[20:36:01 -04:00] [] [---I---] [thread 2201480] Starting Reducer status checking thread
+[20:36:01 -04:00] [] [---I---] [thread 2201480] Bringing barrier up
+[20:36:01 -04:00] [] [---I---] [thread 2218719] Checking in on working reducer: localhost:3600
+[20:36:01 -04:00] [] [---I---] [thread 2218719] Reducer localhost:3600 done: 100%
+[20:36:01 -04:00] [] [---I---] [thread 2218719] Collected results from: localhost:3600 Size: 11846
+[20:36:01 -04:00] [] [---I---] [thread 2218719] Reducer localhost:3600 says it's dying
+[20:36:07 -04:00] [] [---I---] [thread 2218719] Checking in on working reducer: localhost:3700
+[20:36:07 -04:00] [] [---I---] [thread 2218719] Reducer localhost:3700 done: 100%
+[20:36:07 -04:00] [] [---I---] [thread 2218719] Collected results from: localhost:3700 Size: 23855
+[20:36:07 -04:00] [] [---I---] [thread 2218719] Reducer localhost:3700 says it's dying
+[20:36:13 -04:00] [] [---I---] [thread 2218719] Reducers done
+[20:36:13 -04:00] [] [---I---] [thread 2201480] Barrier is down
+[20:36:17 -04:00] [] [---I---] [thread 2201480] Results pushed to HDFS localhost:4500
+[20:36:17 -04:00] [] [---I---] [thread 2201480] Run took: 89271 ms
